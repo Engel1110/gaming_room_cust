@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Gaming Room Customization</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('cart') }}">Cart</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Customize Your Gaming Room</h2>
+        {% for item in items %}
+        <section>
+            <h3>{{ item.name }}</h3>
+            <ul>
+                {% for variant in item.variants %}
+                <li>
+                    {{ variant[0] }} - ${{ variant[1] }}
+                    <form action="{{ url_for('add_to_cart', item_name=variant[0], item_price=variant[1]) }}" method="POST">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endfor %}
+    </main>
+</body>
+</html>

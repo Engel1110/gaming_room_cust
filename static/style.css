@@ -1,0 +1,93 @@
+/* Reset some basic elements to avoid browser inconsistencies */
+body, h1, h2, h3, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation styling */
+nav a {
+    color: #f5f5f5;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* Main content styling */
+main {
+    padding: 1em;
+}
+
+/* Form styling */
+form {
+    margin: 1em 0;
+}
+
+form label {
+    display: block;
+    margin: 0.5em 0;
+}
+
+form input {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Button styling */
+button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: #45a049;
+    outline: none;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 2em;
+}
+
+section h3 {
+    margin: 0;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5em 0;
+}
